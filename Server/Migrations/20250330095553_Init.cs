@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -455,12 +456,12 @@ namespace LexiconLMSBlazor.Server.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_PersistedGrants_SubjectId_ClientId_Type",
                 table: "PersistedGrants",
-                columns: ["SubjectId", "ClientId", "Type"]);
+                columns: new[] { "SubjectId", "ClientId", "Type" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_PersistedGrants_SubjectId_SessionId_Type",
                 table: "PersistedGrants",
-                columns: ["SubjectId", "SessionId", "Type"]);
+                columns: new[] { "SubjectId", "SessionId", "Type" });
         }
 
         /// <inheritdoc />
